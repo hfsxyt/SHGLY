@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد عبدالقوي علي قايد | الموقع التعريفي</title>
+    <!-- خط تجوال العربي العصري -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --bg-card: rgba(20, 28, 46, 0.65);
+            --primary: #38bdf8;
+            --secondary: #818cf8;
+            --accent: #f43f5e;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-glass: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(129, 140, 248, 0.12) 0%, transparent 40%);
+        }
+
+        /* خلفية هندسية خفيفة */
+        .grid-bg {
+            position: fixed;
+            inset: 0;
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* شريط التنقل */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 5%;
+            background: rgba(9, 13, 22, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-glass);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* الحاوية العامة */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* القسم الترحيبي Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #090d16;
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-outline {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-glass);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        /* الأقسام */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title .line {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* قسم نبذة عني */
+        .about-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-text {
+            font-size: 1.25rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #e2e8f0;
+        }
+
+        .study-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(244, 63, 94, 0.15);
+            color: #fda4af;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+            padding: 4px 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .interest-item {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .interest-item i {
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+
+        /* قسم المهارات */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.15);
+        }
+
+        .skill-num {
+            position: absolute;
+            top: 15px;
+            left: 18px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        .skill-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 1.2rem;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(129, 140, 248, 0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* قسم التواصل */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        .contact-value {
+            font-size: 1.15rem;
+            font-weight: 700;
+            direction: ltr;
+            color: var(--text-main);
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 0.5rem;
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border-radius: 10px;
+        }
+
+        /* التذييل */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* إشعار النسخ */
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--primary);
+            color: #090d16;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 2000;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .about-card {
+                padding: 1.8rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <!-- الشريط العلوي -->
+    <nav>
+        <div class="logo">محمد قايد</div>
+        <ul class="nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">نبذة عني</a></li>
+            <li><a href="#skills">مهاراتي</a></li>
+            <li><a href="#contact">تواصل معي</a></li>
+        </ul>
+    </nav>
+
+    <!-- القسم الترحيبي -->
+    <header id="home" class="hero">
+        <div class="container">
+            <span class="hero-badge"><i class="fas fa-graduation-cap"></i> ملف تعريفي شخصي</span>
+            <h1>أهلاً بك، أنا <br><span>محمد عبدالقوي علي قايد</span></h1>
+            <p>طالب طموح وشغوف بالتجارب الجديدة، أجمع بين حب الهندسة والإبداع في عالم الألعاب الإلكترونية، مع التركيز الدائم على التفوق الدراسي.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> تواصل معي</a>
+                <a href="#skills" class="btn btn-outline"><i class="fas fa-star"></i> استكشف مهاراتي</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم نبذة عني -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>نبذة عني</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-card">
+                <p class="about-text">
+                    "إنسان شغوف وأحب أخوض تجارب جديدة، فنان بألعاب السوني والبي سي وأحب المسلسلات، ودائماً أؤمن أن <span class="study-highlight"><i class="fas fa-book-open"></i> الدراسة أهم شيء</span>"
+                </p>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-gamepad"></i>
+                        <div>
+                            <h4>ألعاب السوني والـ PC</h4>
+                            <small style="color: var(--text-muted);">احتراف ومتعة وتحدي</small>
+                        </div>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-film"></i>
+                        <div>
+                            <h4>عالم المسلسلات</h4>
+                            <small style="color: var(--text-muted);">متابعة القصص المشوقة</small>
+                        </div>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-compass"></i>
+                        <div>
+                            <h4>خوض التجارب</h4>
+                            <small style="color: var(--text-muted);">فضول دائم لاكتشاف الجديد</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المهارات -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>مهاراتي</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- 1 -->
+                <div class="skill-card">
+                    <span class="skill-num">01</span>
+                    <div class="skill-icon"><i class="fas fa-headset"></i></div>
+                    <h3>اللعب</h3>
+                    <p>مهارة عالية وسرعة بديهة في ألعاب البلايستيشن والكمبيوتر.</p>
+                </div>
+                <!-- 2 -->
+                <div class="skill-card">
+                    <span class="skill-num">02</span>
+                    <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>الاستكشاف والتجربة</h3>
+                    <p>شغف مستمر بتجربة كل ما هو جديد ومبتكر دون تردد.</p>
+                </div>
+                <!-- 3 -->
+                <div class="skill-card">
+                    <span class="skill-num">03</span>
+                    <div class="skill-icon"><i class="fas fa-face-laugh-beam"></i></div>
+                    <h3>روح الفكاهة</h3>
+                    <p>إضفاء جو من المرح والإيجابية في كل مكان أكون فيه.</p>
+                </div>
+                <!-- 4 -->
+                <div class="skill-card">
+                    <span class="skill-num">04</span>
+                    <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>حب الهندسة</h3>
+                    <p>شغف بالتفكير الهندسي، التحليل، وفهم كيفية عمل الأشياء.</p>
+                </div>
+                <!-- 5 -->
+                <div class="skill-card">
+                    <span class="skill-num">05</span>
+                    <div class="skill-icon"><i class="fas fa-gem"></i></div>
+                    <h3>الذوق</h3>
+                    <p>حس فني واختيارات مميزة تعكس الأناقة في التفاصيل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم وسائل التواصل -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>وسائل التواصل</h2>
+                <div class="line"></div>
+            </div>
+            <div class="contact-grid">
+                <!-- رقم الهاتف -->
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>رقم الجوال</h3>
+                    <div class="contact-value" id="phone-val">0500758567</div>
+                    <div class="contact-actions">
+                        <a href="tel:0500758567" class="btn btn-primary btn-sm"><i class="fas fa-phone"></i> اتصال</a>
+                        <button onclick="copyText('0500758567')" class="btn btn-outline btn-sm"><i class="fas fa-copy"></i> نسخ</button>
+                    </div>
+                </div>
+
+                <!-- البريد الإلكتروني -->
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>البريد الإلكتروني</h3>
+                    <div class="contact-value" id="email-val">moodealmgeede@gmail.com</div>
+                    <div class="contact-actions">
+                        <a href="mailto:moodealmgeede@gmail.com" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> مراسلة</a>
+                        <button onclick="copyText('moodealmgeede@gmail.com')" class="btn btn-outline btn-sm"><i class="fas fa-copy"></i> نسخ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; <span id="year"></span> | تصميم خاص لـ <strong>محمد عبدالقوي علي قايد</strong></p>
+    </footer>
+
+    <!-- إشعار النسخ -->
+    <div id="toast" class="toast">تم النسخ إلى الحافظة!</div>
+
+    <script>
+        // تحديث السنة تلقائياً
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // دالة نسخ النصوص وإظهار الإشعار
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
+            });
+        }
+    </script>
+</body>
+</html>
